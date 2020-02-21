@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{1B8103F7-F793-47B0-9FBE-44EC66BC319D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Antario</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <ProjectName>LSD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</IntDir>
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(ExecutablePath);$(DXSDK_DIR)Utilities\bin\x86</ExecutablePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
+    <TargetName>LSD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</IntDir>
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(ExecutablePath);$(DXSDK_DIR)Utilities\bin\x86</ExecutablePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
+    <TargetName>LSD</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;ANTARIO_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <MapExports>true</MapExports>
+      <AssemblyDebug>true</AssemblyDebug>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ANTARIO_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <StringPooling>
+      </StringPooling>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <EnableParallelCodeGeneration>
+      </EnableParallelCodeGeneration>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <PerUserRedirection>false</PerUserRedirection>
+      <MapExports>true</MapExports>
+      <AssemblyDebug>true</AssemblyDebug>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="lsd\BulletTracer.cpp" />
+    <ClCompile Include="lsd\EnginePrediction.cpp" />
+    <ClCompile Include="lsd\Aimbot.cpp" />
+    <ClCompile Include="lsd\Autowall.cpp" />
+    <ClCompile Include="lsd\LagComp.cpp" />
+    <ClCompile Include="lsd\AntiAim.cpp" />
+    <ClCompile Include="lsd\Legitbot.cpp" />
+    <ClCompile Include="lsd\logs2.cpp" />
+    <ClCompile Include="lsd\Resolver.cpp" />
+    <ClCompile Include="lsd\Hooks.cpp" />
+    <ClCompile Include="lsd\DLLMain.cpp" />
+    <ClCompile Include="lsd\Menu.cpp" />
+    <ClCompile Include="lsd\TGFCfg.cpp" />
+    <ClCompile Include="lsd\CEntity.cpp" />
+    <ClCompile Include="lsd\GlobalVars.cpp" />
+    <ClCompile Include="lsd\Interfaces.cpp" />
+    <ClCompile Include="lsd\Math.cpp" />
+    <ClCompile Include="lsd\NetvarManager.cpp" />
+    <ClCompile Include="lsd\ESP.cpp" />
+    <ClCompile Include="lsd\c_detours.cpp" />
+    <ClCompile Include="lsd\Events.cpp" />
+    <ClCompile Include="lsd\knifechanger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lsd\Aimbot.h" />
+    <ClInclude Include="lsd\Autowall.h" />
+    <ClInclude Include="lsd\BulletTracer.h" />
+    <ClInclude Include="lsd\EnginePrediction.h" />
+    <ClInclude Include="lsd\IViewRenderBeams.h" />
+    <ClInclude Include="lsd\LagComp.h" />
+    <ClInclude Include="lsd\AntiAim.h" />
+    <ClInclude Include="lsd\Features.h" />
+    <ClInclude Include="lsd\Legitbot.h" />
+    <ClInclude Include="lsd\logs2.h" />
+    <ClInclude Include="lsd\Misc.h" />
+    <ClInclude Include="lsd\Resolver.h" />
+    <ClInclude Include="lsd\Hooks.h" />
+    <ClInclude Include="Antario\Menu.h" />
+    <ClInclude Include="lsd\Menu.h" />
+    <ClInclude Include="lsd\Singleton.h" />
+    <ClInclude Include="lsd\sound.h" />
+    <ClInclude Include="lsd\TGFCfg.h" />
+    <ClInclude Include="lsd\bspflags.h" />
+    <ClInclude Include="lsd\CGlobalVarsBase.h" />
+    <ClInclude Include="lsd\CHandle.h" />
+    <ClInclude Include="lsd\CEntity.h" />
+    <ClInclude Include="lsd\checksum_crc.h" />
+    <ClInclude Include="lsd\CInput.h" />
+    <ClInclude Include="lsd\ClientClass.h" />
+    <ClInclude Include="lsd\CModelRender.h" />
+    <ClInclude Include="lsd\Hitboxes.h" />
+    <ClInclude Include="lsd\ICvar.h" />
+    <ClInclude Include="lsd\IEngineTrace.h" />
+    <ClInclude Include="lsd\IMaterial.h" />
+    <ClInclude Include="lsd\ISurface.h" />
+    <ClInclude Include="lsd\ISurfaceData.h" />
+    <ClInclude Include="lsd\IVModelInfo.h" />
+    <ClInclude Include="lsd\IVRenderView.h" />
+    <ClInclude Include="lsd\Color.h" />
+    <ClInclude Include="lsd\CPrediction.h" />
+    <ClInclude Include="lsd\Definitions.h" />
+    <ClInclude Include="lsd\IBaseClientDll.h" />
+    <ClInclude Include="lsd\IClientEntity.h" />
+    <ClInclude Include="lsd\IClientEntityList.h" />
+    <ClInclude Include="lsd\IClientMode.h" />
+    <ClInclude Include="lsd\IClientNetworkable.h" />
+    <ClInclude Include="lsd\IClientRenderable.h" />
+    <ClInclude Include="lsd\IClientThinkable.h" />
+    <ClInclude Include="lsd\IClientUnknown.h" />
+    <ClInclude Include="lsd\IGameEvent.h" />
+    <ClInclude Include="lsd\IVEngineClient.h" />
+    <ClInclude Include="lsd\KeyValues.h" />
+    <ClInclude Include="lsd\PlayerInfo.h" />
+    <ClInclude Include="lsd\GlobalVars.h" />
+    <ClInclude Include="lsd\Interfaces.h" />
+    <ClInclude Include="lsd\Recv.h" />
+    <ClInclude Include="lsd\Vector.h" />
+    <ClInclude Include="lsd\VMatrix.h" />
+    <ClInclude Include="lsd\Math.h" />
+    <ClInclude Include="lsd\NetvarManager.h" />
+    <ClInclude Include="lsd\Utils.h" />
+    <ClInclude Include="lsd\ESP.h" />
+    <ClInclude Include="lsd\XorStr.h" />
+    <ClInclude Include="lsd\c_detours.h" />
+    <ClInclude Include="lsd\Events.h" />
+    <ClInclude Include="lsd\knifechanger.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
