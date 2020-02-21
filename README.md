@@ -1,2 +1,2 @@
 # LSD
-Hello This is my First every csgo project that i have released
+Hello This is my First every C++ project based on csgo cheat that i have released . started coding in 2019 and in the same year started working on it.
